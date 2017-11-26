@@ -19,7 +19,7 @@ private:
 
 	//辅助函数
 	void show();                        //提示输入，并接受输入
-	void operate();                     //计算
+	void main_operate();                     //计算
 	int judge(char ch);                 //判断读入字符属性（数字、计算符、无关符）
 	double read_operand();              //读取完整数字
 	int operate(char ch, char top);      //运行并检错
@@ -48,7 +48,7 @@ void Expression::show()
 void Expression::begin()                  //开始
 {
 	show();
-	operate();
+	main_operate();
 }
 
 int Expression::judge(char ch)           //判断字符属性
@@ -89,7 +89,7 @@ double Expression::read_operand()        //读取完整数
 	return result;
 }
 
-void Expression::operate()                     //主干
+void Expression::main_operate()                     //主干
 {
 	operands.push(0);
 	operators.push('=');
